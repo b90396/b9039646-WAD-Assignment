@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "All Tracks";
+}
+
+<h1>Displays all tracks below</h1>
+
+<p><a asp-controller="Cms" asp-action="AddTrack">Add Track</a></p>
+
+<table class="table">
+    <tr>
+        <td>Track Name</td>
+        <td>Track Length</td>
+        <td>Edit</td>
+        <td>Delete</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td><a>@item.TrackName</a></td>
+    <td><a>@item.TrackLength</a></td>
+    <td><p><a>Update</a></p></td>
+    <td><p><a>Delete</a></p></td>
+</tr>
+    }
+
+</table>
+
+   
