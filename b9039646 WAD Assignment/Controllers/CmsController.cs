@@ -26,8 +26,8 @@ namespace b9039646_WAD_Assignment.Controllers
 
         public IActionResult Index()
         {
-            //List<Track> model = _context.Tracks.ToList();
-            return View(); //model
+            List<Location> model = _context.Locations.ToList();
+            return View(model);
         }
 
         [HttpGet]
