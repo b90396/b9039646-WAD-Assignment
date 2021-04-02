@@ -144,7 +144,6 @@ C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assig
 C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\b9039646 WAD Assignment.TagHelpers.input.cache
 C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\b9039646 WAD Assignment.TagHelpers.output.cache
 C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\b9039646 WAD Assignment.RazorCoreGenerate.cache
-C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\Razor\Views\CMS\AddTrack.cshtml.g.cs
 C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\Razor\Views\CMS\Index.cshtml.g.cs
 C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\Razor\Views\Home\AllTracks.cshtml.g.cs
 C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
@@ -164,3 +163,4 @@ C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assig
 C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\b9039646 WAD Assignment.dll
 C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\b9039646 WAD Assignment.pdb
 C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\b9039646 WAD Assignment.genruntimeconfig.cache
+C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\Razor\Views\CMS\AddLocation.cshtml.g.cs
