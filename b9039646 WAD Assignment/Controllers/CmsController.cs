@@ -39,26 +39,28 @@ namespace b9039646_WAD_Assignment.Controllers
         [HttpPost]
         public IActionResult AddLocation(locationForm model)
         {
-            Location newLocation = new Location
+            if (ModelState.IsValid)
             {
-                Name = model.Name,
-                Description = model.Description,
-                Justification = model.Justification,
-                Date = model.Date,
-                Danger = model.Danger,
-                Longitude = model.Longitude,
-                Latitude = model.Latitude,
-                Area = model.Area,
-                Category = model.Category,
-                Country = model.Country,
-                Continent = model.Continent,
-                GeographicalCoordinates = model.GeographicalCoordinates
-            };
+                Location newLocation = new Location
+                {
+                    Name = model.Name,
+                    Description = model.Description,
+                    Justification = model.Justification,
+                    Date = model.Date,
+                    Danger = model.Danger,
+                    Longitude = model.Longitude,
+                    Latitude = model.Latitude,
+                    Area = model.Area,
+                    Category = model.Category,
+                    Country = model.Country,
+                    Continent = model.Continent,
+                    GeographicalCoordinates = model.GeographicalCoordinates
+                };
 
-            _context.Add(newLocation);
-            _context.SaveChanges();
-            return RedirectToAction(nameof(Index));
-
+                _context.Add(newLocation);
+                _context.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
             return View();
         }
     }

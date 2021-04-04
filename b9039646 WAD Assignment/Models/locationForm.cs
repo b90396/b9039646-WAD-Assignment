@@ -10,7 +10,7 @@ namespace b9039646_WAD_Assignment.Models
 {
     public class locationForm
     {
-        
+        [Required]
         public string Name { get; set; }
 
         public string NameF { get; set; }
@@ -43,7 +43,7 @@ namespace b9039646_WAD_Assignment.Models
 
         public string ContinentF { get; set; }
 
-        [Key]
+        [Key][Required]
         public string GeographicalCoordinates { get; set; }
         
         //public int Rating { get; set; }
