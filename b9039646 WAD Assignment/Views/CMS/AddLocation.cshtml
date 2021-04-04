@@ -1,50 +1,53 @@
-﻿<h1>Add Location</h1>
+﻿@model b9039646_WAD_Assignment.Models.locationForm
+
+<h1>Add Location</h1>
 
 <form asp-controller="Cms" asp-action="AddLocation">
     <div>
-        <label>Name</label>
-        <input type="text" />
+        <label asp-for="Name">Name</label>
+        <input type="text" asp-for="Name" />
+
     </div>
 
     <div>
-        <label>Description</label>
-        <input type="text" />
+        <label asp-for="Description">Description</label>
+        <input type="text" asp-for="Description"/>
     </div>
 
     <div>
-        <label>Justification</label>
-        <textarea></textarea>
+        <label asp-for="Justification">Justification</label>
+        <textarea asp-for="Justification"></textarea>
     </div>
 
     <div>
-        <label>Date</label>
-        <input type="date" />
+        <label asp-for="Date">Date</label>
+        <input type="date" asp-for="Date" />
     </div>
 
     <div>
-        <label>Danger</label>
-        <input type="text" />
+        <label asp-for="Danger">Danger</label>
+        <input type="text" asp-for="Danger" />
     </div>
 
 
     <div>
-        <label>Longitude</label>
-        <input type="number" />
+        <label asp-for="Longitude">Longitude</label>
+        <input type="number" asp-for="Longitude"/>
     </div>
 
     <div>
-        <label>Latitude</label>
-        <input type="number" />
+        <label asp-for="Latitude">Latitude</label>
+        <input type="number" asp-for="Latitude"/>
     </div>
 
     <div>
-        <label>Area</label>
-        <input type="number" />
+        <label asp-for="Area">Area</label>
+        <input type="number" asp-for="Area"/>
     </div>
 
     <div>
-        <label>Category</label>
-        <select name="catergory">
+        <label asp-for="Category">Category</label>
+        <select name="catergory" asp-for="Category">
 
             <option value="cultural">Cultural</option>
             <option value="natural">Natural</option>
@@ -53,18 +56,18 @@
     </div>
 
     <div>
-        <label>Country</label>
-        <input type="text" />
+        <label asp-for="Country">Country</label>
+        <input type="text" asp-for="Country" />
     </div>
 
     <div>
-        <label>Continent</label>
-        <input type="text" />
+        <label asp-for="Continent">Continent</label>
+        <input type="text" asp-for="Continent" />
     </div>
 
     <div>
-        <label>Geographical Co-ordinates</label>
-        <input type="number" />
+        <label asp-for="GeographicalCoordinates">Geographical Co-ordinates</label>
+        <input type="number" asp-for="GeographicalCoordinates" />
     </div>
 
     <div>
