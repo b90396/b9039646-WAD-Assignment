@@ -1,0 +1,18 @@
+﻿@model b9039646_WAD_Assignment.Models.Location
+
+@{
+    //Layout = "_CMS";
+    ViewData["Name"] = "Delete Film";
+}
+
+<form method="post">
+
+    <input type="hidden" name="GeographicalCoordinates" value="@Model.GeographicalCoordinates" />
+
+    <p>Delete film @Model.Name?</p>
+
+    <p><input type="submit" value="Delete" class="delete" /></p>
+
+    <p><a asp-controller="CMS" asp-action="Index" class="add">Keep</a><br></p>
+
+</form>

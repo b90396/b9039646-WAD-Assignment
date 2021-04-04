@@ -3,7 +3,7 @@
     ViewData["Title"] = "All Tracks";
 }
 
-<h1>Displays all tracks below</h1>
+<h1>Displays all locations below</h1>
 
 <p><a asp-controller="Cms" asp-action="AddLocation">Add Location</a></p>
 
@@ -20,7 +20,7 @@
     <td><a>@item.Name</a></td>
     <td><a>@item.Description</a></td>
     <td><p><a>Update</a></p></td>
-    <td><p><a>Delete</a></p></td>
+    <td><p><a asp-controller="Cms" asp-action="DeleteLocation" asp-route-Id="@item.GeographicalCoordinates">Delete</a></p></td>
 </tr>
     }
 

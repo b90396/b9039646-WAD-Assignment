@@ -63,5 +63,20 @@ namespace b9039646_WAD_Assignment.Controllers
             }
             return View();
         }
+
+        [HttpGet]
+        public IActionResult DeleteLocation(String GeographicalCoordinates)
+        {
+            Location model = _context.Locations.Find(GeographicalCoordinates);
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult DeleteLocation(Location model)
+        {
+            _context.Locations.Remove(model);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
