@@ -2,7 +2,8 @@
 
 <h1>Add Location</h1>
 
-<form asp-controller="Cms" asp-action="AddLocation">
+<form asp-controller="Cms" asp-action="EditLocation">
+
     <div>
         <label asp-for="Name">Name</label>
         <input type="text" asp-for="Name" />
@@ -32,17 +33,17 @@
 
     <div>
         <label asp-for="Longitude">Longitude</label>
-        <input type="number" asp-for="Longitude"/>
+        <input type="number" asp-for="Longitude" />
     </div>
 
     <div>
         <label asp-for="Latitude">Latitude</label>
-        <input type="number" asp-for="Latitude"/>
+        <input type="number" asp-for="Latitude" />
     </div>
 
     <div>
         <label asp-for="Area">Area</label>
-        <input type="number" asp-for="Area"/>
+        <input type="number" asp-for="Area" />
     </div>
 
     <div>
@@ -65,14 +66,16 @@
         <input type="text" asp-for="Continent" />
     </div>
 
-    <div>
+    <input type="hidden" name="GeographicalCoordinates" value="@Model.GeographicalCoordinates" />
+
+   @* <div>
         <label asp-for="GeographicalCoordinates">Geographical Co-ordinates</label>
         <input type="number" asp-for="GeographicalCoordinates" />
         <span asp-validation-for="GeographicalCoordinates" class="error"></span>
-    </div>
+    </div>*@
 
     <div>
-        <input type="submit" value="Add" class="add" />
+        <input type="submit" value="Update" class="edit" />
     </div>
 
 </form>

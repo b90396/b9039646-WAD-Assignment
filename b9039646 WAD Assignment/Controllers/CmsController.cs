@@ -68,6 +68,50 @@ namespace b9039646_WAD_Assignment.Controllers
         public IActionResult EditLocation(String GeographicalCoordinates)
         {
             Location model = _context.Locations.Find(GeographicalCoordinates);
+            locationForm formModel = new locationForm
+            {
+                Name = model.Name,
+                Description = model.Description,
+                Justification = model.Justification,
+                Date = model.Date,
+                Danger = model.Danger,
+                Longitude = model.Longitude,
+                Latitude = model.Latitude,
+                Area = model.Area,
+                Category = model.Category,
+                Country = model.Country,
+                Continent = model.Continent,
+                GeographicalCoordinates = model.GeographicalCoordinates
+            };
+            return View(formModel);
+        }
+
+        [HttpPost]
+        public IActionResult EditLocation(locationForm model)
+        {
+            if (ModelState.IsValid)
+            {
+                Location editedLocation = new Location
+                {
+                    Name = model.Name,
+                    Description = model.Description,
+                    Justification = model.Justification,
+                    Date = model.Date,
+                    Danger = model.Danger,
+                    Longitude = model.Longitude,
+                    Latitude = model.Latitude,
+                    Area = model.Area,
+                    Category = model.Category,
+                    Country = model.Country,
+                    Continent = model.Continent,
+                    GeographicalCoordinates = model.GeographicalCoordinates
+                };
+
+                _context.Locations.Update(editedLocation);
+
+                _context.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
             return View(model);
         }
 

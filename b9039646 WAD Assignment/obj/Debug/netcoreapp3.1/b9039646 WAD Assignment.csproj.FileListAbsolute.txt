@@ -165,3 +165,4 @@ C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assig
 C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\b9039646 WAD Assignment.genruntimeconfig.cache
 C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\Razor\Views\CMS\AddLocation.cshtml.g.cs
 C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\Razor\Views\CMS\DeleteLocation.cshtml.g.cs
+C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\Razor\Views\CMS\EditLocation.cshtml.g.cs
