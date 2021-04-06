@@ -137,8 +137,6 @@ C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assig
 C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\b9039646 WAD Assignment.csprojAssemblyReference.cache
 C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\b9039646 WAD Assignment.AssemblyInfoInputs.cache
 C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\b9039646 WAD Assignment.AssemblyInfo.cs
-C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\b9039646 WAD Assignment.csproj.CoreCompileInputs.cache
-C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\b9039646 WAD Assignment.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\b9039646 WAD Assignment.RazorAssemblyInfo.cache
 C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\b9039646 WAD Assignment.RazorAssemblyInfo.cs
 C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\b9039646 WAD Assignment.TagHelpers.input.cache
@@ -166,3 +164,8 @@ C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assig
 C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\Razor\Views\CMS\AddLocation.cshtml.g.cs
 C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\Razor\Views\CMS\DeleteLocation.cshtml.g.cs
 C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\Razor\Views\CMS\EditLocation.cshtml.g.cs
+C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll

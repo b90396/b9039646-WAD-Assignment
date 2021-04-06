@@ -29,6 +29,18 @@ namespace b9039646_WAD_Assignment
             services.AddControllersWithViews();
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddDbContext<AppIdentityDbContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddIdentity<User, Role>().AddEntityFrameworkStores<AppIdentityDbContext>();
+
+            services.ConfigureApplicationCookie(opt =>
+            {
+                opt.LoginPath = "/SignIn";
+                opt.AccessDeniedPath = "/AccessDenied";
+
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +60,8 @@ namespace b9039646_WAD_Assignment
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseAuthorization();
 
@@ -57,6 +71,8 @@ namespace b9039646_WAD_Assignment
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            
         }
     }
 }
