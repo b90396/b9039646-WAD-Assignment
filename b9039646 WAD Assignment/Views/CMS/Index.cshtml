@@ -20,7 +20,7 @@
     <td><a>@item.Name</a></td>
     <td><a>@item.Description</a></td>
     <td><p><a>Update</a></p></td>
-    <td><p><a asp-controller="Cms" asp-action="DeleteLocation" asp-route-Id="@item.GeographicalCoordinates">Delete</a></p></td>
+    <td><p><a asp-controller="Cms" asp-action="DeleteLocation" asp-route-GeographicalCoordinates="@item.GeographicalCoordinates" >Delete</a></p></td>
 </tr>
     }
 
