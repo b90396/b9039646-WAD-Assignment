@@ -98,6 +98,15 @@ namespace b9039646_WAD_Assignment.Controllers
             return View();
         }
 
+        [HttpPost]
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public IActionResult SignOut()
+        {
+            signinManager.SignOutAsync().Wait();
+            return RedirectToAction("SignIn", "Authentication");
+        }
+
 
     }
 }

@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UNESCO Site Organiser</title>
+    <link/>
+</head>
+<body>
+    <header>
+        <div>
+            <div>
+                <h1>Content Management System: </h1>
+                <nav>
+                    <ul>
+                        <li><a asp-controller="Home" asp-action="AllFilms">Location List</a></li>
+                        <li>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <div class="login">
+                                    <p>Welcome @User.Identity.Name</p>
+                                    <form asp-controller="Authentication" asp-action="SignOut" method="post">
+                                        <button type="submit" class="delete">Sign Out</button>
+                                    </form>
+                                </div>
+                            }
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        @RenderBody()
+
+
+    </main>
+
+
+    <footer>
+    </footer>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
