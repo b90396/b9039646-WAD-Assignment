@@ -26,23 +26,24 @@ namespace b9039646_WAD_Assignment.Controllers
             return View();
         }
 
+
         public IActionResult Privacy()
         {
             return View();
         }
 
-        public IActionResult OneTrack()
+        public IActionResult OneLocation()
         {
-            //Track firstTrack = _context.Tracks.FirstOrDefault();
+            Location firstLocation = _context.Locations.FirstOrDefault();
 
-            return View(); //firstTrack
+            return View(firstLocation);
         }
 
-        public IActionResult AllTracks()
+        public IActionResult AllLocations()
         {
-            //List<Track> AllTracks = _context.Tracks.ToList();
+            List<Location> AllLocations = _context.Locations.ToList();
 
-            return View(); //AllTracks
+            return View(AllLocations); 
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
