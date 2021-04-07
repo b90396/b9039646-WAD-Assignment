@@ -26,6 +26,31 @@ namespace b9039646_WAD_Assignment.Controllers
             this.signinManager = signinManager;
         }
 
+        public IActionResult SignIn()
+        {
+            return View();        
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult SignIn(SignIn obj)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = signinManager.PasswordSignInAsync(obj.UserName, obj.Password,obj.RememberMe, false).Result;
+
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Index", "CMS");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Invalid user details");
+                }
+            }
+            return View(obj);
+        }
+
 
         public IActionResult Register()
         {
@@ -66,6 +91,11 @@ namespace b9039646_WAD_Assignment.Controllers
                 }
             }
             return View(obj);
+        }
+
+        public IActionResult AccessDenied()
+        {
+            return View();
         }
 
 

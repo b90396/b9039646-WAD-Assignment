@@ -5,11 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using b9039646_WAD_Assignment.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
+
 namespace b9039646_WAD_Assignment.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class CmsController : Controller
     {
 
@@ -17,6 +21,7 @@ namespace b9039646_WAD_Assignment.Controllers
 
         private readonly ApplicationDbContext _context;
 
+        
         public CmsController(ILogger<CmsController> logger, ApplicationDbContext context)
         {
             _context = context;

@@ -172,3 +172,5 @@ C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assig
 C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\b9039646 WAD Assignment.csproj.CoreCompileInputs.cache
 C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\b9039646 WAD Assignment.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\Razor\Views\Authentication\Register.cshtml.g.cs
+C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\Razor\Views\Authentication\AccessDenied.cshtml.g.cs
+C:\Users\LabStudent-55-504266\Desktop\b9039646-WAD-Assignment\b9039646-WAD-Assignment\b9039646 WAD Assignment\obj\Debug\netcoreapp3.1\Razor\Views\Authentication\SignIn.cshtml.g.cs
