@@ -5,3 +5,8 @@
     border-color:black;
     border-radius:1px;
 }
+
+.locationName{
+    font-size:large;
+    font-weight:700;
+}

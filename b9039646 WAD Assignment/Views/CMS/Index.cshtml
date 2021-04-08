@@ -1,10 +1,10 @@
 ﻿
 @{ ViewData["Title"] = "All Tracks"; }
 @{
-    Layout = "_CMS";
+    Layout = "_Layout";
 }
 
-<h1>Displays all locations below</h1>
+<h1>All locations below can be updated or deleted</h1>
 
 <p><a asp-controller="Cms" asp-action="AddLocation">Add Location</a></p>
 
@@ -12,7 +12,7 @@
     <tr>
         <td>Name</td>
         <td>Description</td>
-        <td>Edit</td>
+        <td>Update</td>
         <td>Delete</td>
     </tr>
     @foreach (var item in Model)

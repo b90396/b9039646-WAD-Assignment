@@ -20,7 +20,13 @@
             </div>
             @if (User.Identity.IsAuthenticated)
             {
-                <div class="signIn">Welcome, @User.Identity.Name</div>
+                <div class="signIn">
+                    Welcome, @User.Identity.Name
+                    <form asp-controller="Authentication" asp-action="SignOut" method="post">
+                        <button type="submit" class="delete">Sign Out</button>
+                    </form>
+
+                </div>
             }
             else
             {   <div class="signIn"><a asp-controller="Authentication" asp-action="SignIn">Sign in</a></div> }
@@ -28,8 +34,8 @@
         </div>
 
         <div class="navbar" id="navbar">
-            <a class="active" href="#home">Home</a>
-            <a href="">Locations</a>
+            <a asp-controller="Home" asp-action="Index">Home</a>
+            <a asp-controller="Home" asp-action="AllLocations">Locations</a>
             <a href="">My Lists</a>
             <a href="">About</a>
         </div>

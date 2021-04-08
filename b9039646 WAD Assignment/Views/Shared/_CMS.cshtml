@@ -4,13 +4,46 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UNESCO Site Organiser</title>
-    <link/>
+    
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script type="text/javascript" src="/js/site.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div>
             <div>
                 <h1>Content Management System: </h1>
+                <div class="titlebar">
+                    <div class="burgerMenu">
+                        <img id="burgMenu" onclick="dropDown()" src="/images/burgerMenu.png" width="42" height="42" />
+                    </div>
+                    <div class="unescoTitle">
+                        UNESCO Sites
+                    </div>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                <div class="signIn">
+                    Welcome, @User.Identity.Name
+                    <form asp-controller="Authentication" asp-action="SignOut" method="post">
+                        <button type="submit" class="delete">Sign Out</button>
+                    </form>
+
+                </div> }
+                        else
+                        { <div class="signIn"><a asp-controller="Authentication" asp-action="SignIn">Sign in</a>
+                          </div>
+                        }
+
+                </div>
+
+                <div class="navbar" id="navbar">
+                    <a asp-controller="Home" asp-action="Index">Home</a>
+                    <a asp-controller="Home" asp-action="AllLocations">Locations</a>
+                    <a href="">My Lists</a>
+                    <a href="">About</a>
+                </div>
                 <nav>
                     <ul>
                         <li><a asp-controller="Home" asp-action="AllFilms">Location List</a></li>
@@ -18,10 +51,7 @@
                             @if (User.Identity.IsAuthenticated)
                             {
                                 <div class="login">
-                                    <p>Welcome @User.Identity.Name</p>
-                                    <form asp-controller="Authentication" asp-action="SignOut" method="post">
-                                        <button type="submit" class="delete">Sign Out</button>
-                                    </form>
+                                    
                                 </div>
                             }
                         </li>

@@ -34,9 +34,12 @@ namespace b9039646_WAD_Assignment.Controllers
 
         public IActionResult OneLocation()
         {
-            Location firstLocation = _context.Locations.FirstOrDefault();
+            Random random = new Random();
+            int max = _context.Locations.Count();
+            int locationIndex = random.Next(max);
+            Location[] LocationArray = _context.Locations.ToArray();
 
-            return View(firstLocation);
+            return View(LocationArray[locationIndex]);
         }
 
         public IActionResult AllLocations()

@@ -3,10 +3,26 @@
     ViewData["Name"] = "All locations";
 }
 
-<h1>Displays all tracks below</h1>
+    <head>
 
-@foreach (var item in Model)
-{
-    <p>@item.Name</p>
-}
+        <link rel="stylesheet" href="~/css/home.css" />
+
+    </head>
+
+<h2 class="title">Displays all Locations below</h2>
+
+<table class="table">
+    <tr>
+        <td>Name</td>
+        <td>Description</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr>
+    <td><a>@item.Name</a></td>
+    <td><a>@item.Description</a></td>
+    </tr>
+
+    }
+</table>
 
