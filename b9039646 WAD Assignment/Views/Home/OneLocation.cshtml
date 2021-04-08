@@ -1,14 +1,28 @@
-﻿@model b9039646_WAD_Assignment.Models.Location
-@{
-    //ViewData["Name"] = Model.Name;
-}
+﻿
+    <head>
 
-<head>
+        <link rel="stylesheet" href="~/css/home.css" />
 
-    <link rel="stylesheet" href="~/css/home.css" />
+    </head>
 
-</head>
+<table class="table">
+    <tr>
+        <td>Name</td>
+        <td>Description</td>
+        <td>Area</td>
+        <td>Country</td>
+        <td>Continent</td>
+        <td>Geographical Co-ordinates</td>
+    </tr>
+   
+    <tr>
+        <td><a>@Model.Name</a></td>
+        <td><a>@Model.Description</a></td>
+        <td>@Model.Area</td>
+        <td>@Model.Country</td>
+        <td>@Model.Continent</td>
+        <td>@Model.GeographicalCoordinates</td>
 
-<h1 class="title">Generates a random location below</h1>
+    </tr>
 
-<p class=" = locationName">@Model.Name</p>
+</table>

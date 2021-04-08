@@ -32,7 +32,7 @@ namespace b9039646_WAD_Assignment.Controllers
             return View();
         }
 
-        public IActionResult OneLocation()
+        public IActionResult RandomLocation()
         {
             Random random = new Random();
             int max = _context.Locations.Count();
@@ -47,6 +47,13 @@ namespace b9039646_WAD_Assignment.Controllers
             List<Location> AllLocations = _context.Locations.ToList();
 
             return View(AllLocations); 
+        }
+
+        public IActionResult OneLocation(String GeographicalCoordinates)
+        {
+            Location model = _context.Locations.Find(GeographicalCoordinates);
+            return View(model);
+        
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

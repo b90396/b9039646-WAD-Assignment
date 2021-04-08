@@ -19,7 +19,7 @@
     @foreach (var item in Model)
     {
     <tr>
-    <td><a>@item.Name</a></td>
+    <td><a asp-controller="Home" asp-action="OneLocation" asp-route-GeographicalCoordinates="@item.GeographicalCoordinates">@item.Name</a></td>
     <td><a>@item.Description</a></td>
     </tr>
 
