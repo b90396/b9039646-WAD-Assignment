@@ -64,11 +64,13 @@ namespace b9039646_WAD_Assignment.Controllers
         public IActionResult FavouriteLocationsPage() 
         {
             var id = _userManager.GetUserId(User);
-            FavouriteLocations model = null;
+            FavouriteLocations list = new FavouriteLocations();
+            FavouriteLocationReturnFrom model = new FavouriteLocationReturnFrom();
 
             if (_context.FavouriteLocations.Find(id) != null)
             {
-                model = _context.FavouriteLocations.Find(id);
+                list = _context.FavouriteLocations.Find(id);
+                model.location1 = _context.Locations.Find(list.locationCoordinates1);
             }
             else 
             {
@@ -77,10 +79,23 @@ namespace b9039646_WAD_Assignment.Controllers
                 _context.FavouriteLocations.Add(newList);
                 _context.SaveChanges();
 
-                model = _context.FavouriteLocations.Find(id);
+                list = _context.FavouriteLocations.Find(id);
             }
 
+
             return View(model);
+        }
+
+        public IActionResult AddToFavourites(String GeographicalCoordinates)
+        {
+            var id = _userManager.GetUserId(User);
+            if (_context.FavouriteLocations.Find(id).locationCoordinates1 == null)
+            {
+                _context.FavouriteLocations.Find(id).locationCoordinates1 = GeographicalCoordinates;
+                _context.SaveChanges();
+            }
+
+            return RedirectToAction("FavouriteLocationsPage");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

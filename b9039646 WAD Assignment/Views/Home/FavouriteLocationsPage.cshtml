@@ -1,4 +1,4 @@
-﻿@model b9039646_WAD_Assignment.Models.FavouriteLocations
+﻿@model b9039646_WAD_Assignment.Models.FavouriteLocationReturnFrom
 @{
     //ViewData["Name"] = Model.Name;
 }
@@ -10,5 +10,146 @@
 </head>
 
 <h1 class="title">Favourite Locations</h1>
+<table>
+    <tr>
+        <td>1.</td>
+        @if (Model.location1 != null)
+        {
+            <td class=" = locationName"> @Model.location1.Name</td>
+            <td class=" = locationName"> @Model.location1.Description</td>
+            <td class=" = locationName"> @Model.location1.Area</td>
+            <td class=" = locationName"> @Model.location1.Country</td>
+            <td class=" = locationName"> @Model.location1.Continent</td>
+            <td class=" = locationName"> @Model.location1.GeographicalCoordinates</td>
+        }
+        else { <td>Not set yet!</td> }
+    </tr>
 
-<p class=" = locationName">@Model.UserID</p>
+    <tr>
+        <td>2.</td>
+        @if (Model.location2 != null)
+        {
+            <td class=" = locationName"> @Model.location2.Name</td>
+            <td class=" = locationName"> @Model.location2.Description</td>
+            <td class=" = locationName"> @Model.location2.Area</td>
+            <td class=" = locationName"> @Model.location2.Country</td>
+            <td class=" = locationName"> @Model.location2.Continent</td>
+            <td class=" = locationName"> @Model.location2.GeographicalCoordinates</td>
+        }
+        else { <td>Not set yet!</td> }
+    </tr>
+
+    <tr>
+        <td>3.</td>
+        @if (Model.location3 != null)
+        {
+            <td class=" = locationName"> @Model.location3.Name</td>
+            <td class=" = locationName"> @Model.location3.Description</td>
+            <td class=" = locationName"> @Model.location3.Area</td>
+            <td class=" = locationName"> @Model.location3.Country</td>
+            <td class=" = locationName"> @Model.location3.Continent</td>
+            <td class=" = locationName"> @Model.location3.GeographicalCoordinates</td>
+        }
+        else { <td>Not set yet!</td> }
+    </tr>
+
+    <tr>
+        <td>4.</td>
+        @if (Model.location4 != null)
+        {
+            <td class=" = locationName"> @Model.location4.Name</td>
+            <td class=" = locationName"> @Model.location4.Description</td>
+            <td class=" = locationName"> @Model.location4.Area</td>
+            <td class=" = locationName"> @Model.location4.Country</td>
+            <td class=" = locationName"> @Model.location4.Continent</td>
+            <td class=" = locationName"> @Model.location4.GeographicalCoordinates</td>
+        }
+        else { <td>Not set yet!</td> }
+    </tr>
+
+    <tr>
+        <td>5.</td>
+        @if (Model.location5 != null)
+        {
+            <td class=" = locationName"> @Model.location5.Name</td>
+            <td class=" = locationName"> @Model.location5.Description</td>
+            <td class=" = locationName"> @Model.location5.Area</td>
+            <td class=" = locationName"> @Model.location5.Country</td>
+            <td class=" = locationName"> @Model.location5.Continent</td>
+            <td class=" = locationName"> @Model.location5.GeographicalCoordinates</td>
+        }
+        else { <td>Not set yet!</td> }
+    </tr>
+
+    <tr>
+        <td>6.</td>
+        @if (Model.location6 != null)
+        {
+            <td class=" = locationName"> @Model.location6.Name</td>
+            <td class=" = locationName"> @Model.location6.Description</td>
+            <td class=" = locationName"> @Model.location6.Area</td>
+            <td class=" = locationName"> @Model.location6.Country</td>
+            <td class=" = locationName"> @Model.location6.Continent</td>
+            <td class=" = locationName"> @Model.location6.GeographicalCoordinates</td>
+        }
+        else { <td>Not set yet!</td> }
+    </tr>
+
+    <tr>
+        <td>7.</td>
+        @if (Model.location7 != null)
+        {
+            <td class=" = locationName"> @Model.location7.Name</td>
+            <td class=" = locationName"> @Model.location7.Description</td>
+            <td class=" = locationName"> @Model.location7.Area</td>
+            <td class=" = locationName"> @Model.location7.Country</td>
+            <td class=" = locationName"> @Model.location7.Continent</td>
+            <td class=" = locationName"> @Model.location7.GeographicalCoordinates</td>
+        }
+        else { <td>Not set yet!</td> }
+    </tr>
+
+    <tr>
+        <td>8.</td>
+        @if (Model.location8 != null)
+        {
+            <td class=" = locationName"> @Model.location8.Name</td>
+            <td class=" = locationName"> @Model.location8.Description</td>
+            <td class=" = locationName"> @Model.location8.Area</td>
+            <td class=" = locationName"> @Model.location8.Country</td>
+            <td class=" = locationName"> @Model.location8.Continent</td>
+            <td class=" = locationName"> @Model.location8.GeographicalCoordinates</td>
+        }
+        else { <td>Not set yet!</td> }
+    </tr>
+
+    <tr>
+        <td>9.</td>
+        @if (Model.location9 != null)
+        {
+            <td class=" = locationName"> @Model.location9.Name</td>
+            <td class=" = locationName"> @Model.location9.Description</td>
+            <td class=" = locationName"> @Model.location9.Area</td>
+            <td class=" = locationName"> @Model.location9.Country</td>
+            <td class=" = locationName"> @Model.location9.Continent</td>
+            <td class=" = locationName"> @Model.location9.GeographicalCoordinates</td>
+        }
+        else { <td>Not set yet!</td> }
+    </tr>
+
+    <tr>
+        <td>10.</td>
+        @if (Model.location10 != null)
+        {
+            <td class=" = locationName"> @Model.location10.Name</td>
+            <td class=" = locationName"> @Model.location10.Description</td>
+            <td class=" = locationName"> @Model.location10.Area</td>
+            <td class=" = locationName"> @Model.location10.Country</td>
+            <td class=" = locationName"> @Model.location10.Continent</td>
+            <td class=" = locationName"> @Model.location10.GeographicalCoordinates</td>
+        }
+        else { <td>Not set yet!</td> }
+    </tr>
+    
+
+</table>
