@@ -19,10 +19,11 @@ namespace b9039646_WAD_Assignment.Controllers
         private readonly UserManager<User> _userManager;
 
 
-        public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
+        public HomeController(ILogger<HomeController> logger, ApplicationDbContext context, UserManager<User> manager)
         {
             _logger = logger;
             _context = context;
+            _userManager = manager;
         }
 
         public IActionResult Index()
@@ -60,10 +61,26 @@ namespace b9039646_WAD_Assignment.Controllers
         
         }
 
-        public IActionResult FavouriteLocations()   //needs to find the favLocation row based on users id
+        public IActionResult FavouriteLocationsPage() 
         {
             var id = _userManager.GetUserId(User);
-            return View();
+            FavouriteLocations model = null;
+
+            if (_context.FavouriteLocations.Find(id) != null)
+            {
+                model = _context.FavouriteLocations.Find(id);
+            }
+            else 
+            {
+                FavouriteLocations newList = new FavouriteLocations();
+                newList.UserID = id;
+                _context.FavouriteLocations.Add(newList);
+                _context.SaveChanges();
+
+                model = _context.FavouriteLocations.Find(id);
+            }
+
+            return View(model);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
