@@ -12,5 +12,8 @@ namespace b9039646_WAD_Assignment.Models
         //public string email { get; set; }
         //public string password { get; set; }
         //public string username { get; set; }
+
     }
+
+    
 }

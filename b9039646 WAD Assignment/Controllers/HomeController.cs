@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using b9039646_WAD_Assignment.Models;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 
 namespace b9039646_WAD_Assignment.Controllers
 {
@@ -13,6 +16,7 @@ namespace b9039646_WAD_Assignment.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<User> _userManager;
 
 
         public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
@@ -54,6 +58,12 @@ namespace b9039646_WAD_Assignment.Controllers
             Location model = _context.Locations.Find(GeographicalCoordinates);
             return View(model);
         
+        }
+
+        public IActionResult FavouriteLocations()   //needs to find the favLocation row based on users id
+        {
+            var id = _userManager.GetUserId(User);
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

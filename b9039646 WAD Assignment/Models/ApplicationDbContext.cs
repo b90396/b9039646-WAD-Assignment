@@ -15,5 +15,6 @@ namespace b9039646_WAD_Assignment.Models
         }
 
         public DbSet<Location> Locations { get; set; }
+        public DbSet<FavouriteLocations> FavouriteLocations { get; set; }
     }
 }
