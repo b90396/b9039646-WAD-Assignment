@@ -54,6 +54,33 @@ namespace b9039646_WAD_Assignment.Controllers
             return View(AllLocations); 
         }
 
+        public IActionResult SortBy(string SortByParameter)
+        {
+            //List<Location> AllLocations = _context.Locations.ToList();
+
+            var AllLocations = from l in _context.Locations select l;
+
+            if (SortByParameter == "name")
+            {
+                AllLocations = AllLocations.OrderBy(l => l.Name);            
+            }
+            if (SortByParameter == "country")
+            {
+                AllLocations = AllLocations.OrderBy(l => l.Country);
+            }
+            if (SortByParameter == "continent")
+            {
+                AllLocations = AllLocations.OrderBy(l => l.Continent);
+            }
+            if (SortByParameter == "area")
+            {
+                AllLocations = AllLocations.OrderBy(l => l.Area);
+            }
+
+
+            return View(AllLocations);
+        }
+
         public IActionResult OneLocation(String GeographicalCoordinates)
         {
             Location model = _context.Locations.Find(GeographicalCoordinates);
