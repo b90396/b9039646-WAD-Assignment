@@ -93,6 +93,37 @@ namespace b9039646_WAD_Assignment.Controllers
             return View(obj);
         }
 
+        public IActionResult ChangePassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ChangePassword(SignIn obj)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = signinManager.PasswordSignInAsync(obj.UserName, obj.Password, obj.RememberMe, false).Result;
+                var user = await userManager.FindByNameAsync(obj.UserName);
+                
+
+                if (result.Succeeded)
+                {
+                    var newPassword = userManager.PasswordHasher.HashPassword(user, obj.NewPassword);
+                    user.PasswordHash = newPassword;
+                    await userManager.UpdateAsync(user);
+                    return RedirectToAction("Index", "CMS");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Invalid user details");
+                }
+            }
+            return View(obj);
+            
+        }
+
         public IActionResult AccessDenied()
         {
             return View();

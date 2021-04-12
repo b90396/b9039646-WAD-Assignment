@@ -19,5 +19,7 @@ namespace b9039646_WAD_Assignment.Models
 
         [Required]
         public bool RememberMe { get; set; }
+
+        public string NewPassword { get; set; }
     }
 }
