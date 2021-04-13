@@ -1,32 +1,90 @@
 ﻿
-    <head>
+@{ 
+    string backgroundImage = "";
 
-        <link rel="stylesheet" href="~/css/home.css" />
+    if (Model.Continent == "Africa")
+    {
+        backgroundImage = "/images/Africa.png";
+    }
+    if (Model.Continent == "Latin America and the Caribbean")
+    {
+        backgroundImage = "/images/South_America.png";
+    }
+    if (Model.Continent == "Europe and North America")
+    {
+        if(Model.Country == "United States of America")
+        {
+            backgroundImage = "/images/North_America.png";
+        }
+        else { backgroundImage = "/images/Europe.png"; }
 
-    </head>
+    }
+    if (Model.Continent == "Asia and the Pacific" || Model.Continent == "Arab States")
+    {
 
-<table class="table">
-    <tr>
-        <td>Name</td>
-        <td>Description</td>
-        <td>Area</td>
-        <td>Country</td>
-        <td>Continent</td>
-        <td>Geographical Co-ordinates</td>
-    </tr>
-   
-    <tr>
-        <td><a>@Model.Name</a></td>
-        <td><a>@Model.Description</a></td>
-        <td>@Model.Area</td>
-        <td>@Model.Country</td>
-        <td>@Model.Continent</td>
-        <td>@Model.GeographicalCoordinates</td>
+        backgroundImage = "/images/Asia.png";
 
-    </tr>
+    }
+    if (Model.Country == "Australia" || Model.Country == "New Zealand,New Zealand,New Zealand")
+    {
 
-    
+        backgroundImage = "/images/Australia.png";
 
-</table>
+    }
 
-<a asp-controller="Home" asp-action="AddToFavourites" asp-route-GeographicalCoordinates="@Model.GeographicalCoordinates">Add to Favourites</a>
+
+    //CONTINUE THIS HERE
+}
+
+
+
+<head>
+
+    <link rel="stylesheet" href="~/css/home.css" />
+    <style>
+        body {
+
+     
+            background-image: url(@backgroundImage);
+            background-repeat:no-repeat;
+            background-size:100% 100%;
+                     
+
+
+
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+     <table class="table">
+        <tr>
+            <td>Name</td>
+            <td>Description</td>
+            <td>Area</td>
+            <td>Country</td>
+            <td>Continent</td>
+            <td>Geographical Co-ordinates</td>
+        </tr>
+
+        <tr>
+            <td><a>@Model.Name</a></td>
+            <td><a>@Model.Description</a></td>
+            <td>@Model.Area</td>
+            <td>@Model.Country</td>
+            <td>@Model.Continent</td>
+            <td>@Model.GeographicalCoordinates</td>
+
+
+        </tr>
+
+
+
+     </table>
+
+     <a asp-controller="Home" asp-action="AddToFavourites" asp-route-GeographicalCoordinates="@Model.GeographicalCoordinates">Add to Favourites</a>
+
+</body>
