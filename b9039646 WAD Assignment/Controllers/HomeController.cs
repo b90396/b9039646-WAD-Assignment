@@ -28,7 +28,9 @@ namespace b9039646_WAD_Assignment.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            List<Location> AllLocations = _context.Locations.ToList();
+
+            return View(AllLocations);
         }
 
 

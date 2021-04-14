@@ -2,6 +2,8 @@
     ViewData["Title"] = "Home Page";
 }
 
+
+
 <head>
 
     <link rel="stylesheet" href="~/css/home.css" />
@@ -16,7 +18,7 @@
         <div class="box">Location Links
         
             <div class="verticalContainer">
-                <div class="verticalBox">View all sites</div>
+                <div class="verticalBox"><a asp-controller="Home" asp-action="AllLocations">View all sites</a></div>
                 <div class="verticalBox"><a asp-controller="Home" asp-action="FavouriteLocationsPage">View my sites</a></div>
                 <div class="verticalBox">???</div>
 
@@ -27,6 +29,8 @@
         <div> </div>
 
         <div class="box">Random Location
+
+            <p>@Model[1].Name</p>
 
 
 
