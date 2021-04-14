@@ -1,40 +1,58 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@{ ViewData["Title"] = "Home Page"; }
 
 
 
 <head>
 
     <link rel="stylesheet" href="~/css/home.css" />
+    <script type="text/javascript" src="/js/site.js"></script>
 
 </head>
 
 <div class="text-center">
     <h1 class="title">Welcome</h1>
-    
+
     <div class="container">
 
-        <div class="box">Location Links
-        
+        <div class="box">
+            Location Links
+
             <div class="verticalContainer">
                 <div class="verticalBox"><a asp-controller="Home" asp-action="AllLocations">View all sites</a></div>
                 <div class="verticalBox"><a asp-controller="Home" asp-action="FavouriteLocationsPage">View my sites</a></div>
                 <div class="verticalBox">???</div>
 
             </div>
-        
-        </div>
-
-        <div> </div>
-
-        <div class="box">Random Location
-
-            <p>@Model[1].Name</p>
-
-
 
         </div>
 
+
+
+        <div class="box">
+            Random Location
+            <div class="slideContainer">
+
+
+                @{Random random = new Random();
+                    int index = random.Next(Model.Count);
+
+        <div class="Slides">
+            
+            <div class="text"><a asp-controller="Home" asp-action="OneLocation" asp-route-GeographicalCoordinates="@Model[index].GeographicalCoordinates">@Model[index].Name</a></div>
+            <div class="text">@Model[index].Country</div>
+        </div> index = random.Next(Model.Count);
+
+        <div class="Slides">
+            <div class="text"><a asp-controller="Home" asp-action="OneLocation" asp-route-GeographicalCoordinates="@Model[index].GeographicalCoordinates">@Model[index].Name</a></div>
+            <div class="text">@Model[index].Country</div>
+        </div> index = random.Next(Model.Count);
+
+        <div class="Slides">
+            <div class="text"><a asp-controller="Home" asp-action="OneLocation" asp-route-GeographicalCoordinates="@Model[index].GeographicalCoordinates">@Model[index].Name</a></div>
+            <div class="text">@Model[index].Country</div>
+        </div> }
+
+            </div>
+        </div>
+        </div>
     </div>
-</div>

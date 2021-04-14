@@ -56,9 +56,35 @@ tr:hover {
 }
 
 .verticalBox:hover{
-    font-size: 150%;
+    
+    text-decoration:double;
 }
 
 .info{
     color:black;
 }
+
+.Slides {
+    display: none;
+    background: url("/images/World.png");
+    background-size:245px;
+    background-repeat:no-repeat;
+}
+
+.slideContainer {
+    max-width: 250px;
+    position: relative;
+    margin: auto;
+}
+
+.text {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
