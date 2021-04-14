@@ -18,8 +18,8 @@
     @foreach (var item in Model)
     {
 <tr>
-    <td><a>@item.Name</a></td>
-    <td><a>@item.Description</a></td>
+    <td>@item.Name</td>
+    <td>@item.Description</td>
     <td><p><a asp-controller="Cms" asp-action="EditLocation" asp-route-GeographicalCoordinates="@item.GeographicalCoordinates">Update</a></p></td>
     <td><p><a asp-controller="Cms" asp-action="DeleteLocation" asp-route-GeographicalCoordinates="@item.GeographicalCoordinates">Delete</a></p></td>
 </tr>}

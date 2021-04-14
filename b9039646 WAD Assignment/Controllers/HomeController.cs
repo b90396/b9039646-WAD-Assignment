@@ -96,6 +96,12 @@ namespace b9039646_WAD_Assignment.Controllers
             FavouriteLocations list = new FavouriteLocations();
             FavouriteLocationReturnFrom model = new FavouriteLocationReturnFrom();
 
+            if(id == null)
+            {
+                return RedirectToAction("SignIn", "Authentication");
+            }
+
+
             if (_context.FavouriteLocations.Find(id) != null)
             {
                 list = _context.FavouriteLocations.Find(id);
