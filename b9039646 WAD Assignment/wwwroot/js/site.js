@@ -34,3 +34,10 @@ function showSlides() {
     slides[slideIndex - 1].style.display = "block";
     setTimeout(showSlides, 3500);
 }
+
+function toTop() {
+
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+
+}
