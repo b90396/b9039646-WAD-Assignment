@@ -104,29 +104,24 @@ body {
     text-align: center;
     background-color: lightgray;
     overflow: hidden;
-
 }
 
-.titlebar div {
-    display: table-cell;
-    vertical-align: middle;
-    color: #012c01;
-    text-align: center;
-    font-size: 17px;
-}
+    .titlebar div {
+        display: table-cell;
+        vertical-align: middle;
+        color: #012c01;
+        text-align: center;
+        font-size: 17px;
+    }
 
 .burgerMenu {
-    float:left;
-
+    float: left;
 }
 
 .signIn {
-
-    float:right;
-   
-   
+    float: right;
 }
 
-.unescoTitle{
-    padding-left:8%;
+.unescoTitle {
+    padding-left: 18%;
 }

@@ -1,81 +1,84 @@
 ﻿@model b9039646_WAD_Assignment.Models.locationForm
 
-<h1 class="title">Add Location</h1>
+    <head>
+        <link rel="stylesheet" href="~/css/forms.css" />
+        <link rel="stylesheet" href="~/css/home.css" />
+    </head>
 
-<form asp-controller="Cms" asp-action="EditLocation">
+<h1 class="title">Edit Location</h1>
 
-    <div>
-        <label asp-for="Name">Name</label>
-        <input type="text" asp-for="Name" />
-        <span asp-validation-for="Name" class="error"></span>
-    </div>
+<div class="formContainer">
+    <form asp-controller="Cms" asp-action="EditLocation" class="centerForm">
 
-    <div>
-        <label asp-for="Description">Description</label>
-        <textarea asp-for="Description"></textarea>
-    </div>
+        <div class="formField">
+            <label asp-for="Name">Name</label>
+            <input type="text" asp-for="Name" />
+            <span asp-validation-for="Name" class="error"></span>
+        </div>
 
-    <div>
-        <label asp-for="Justification">Justification</label>
-        <textarea asp-for="Justification"></textarea>
-    </div>
+        <div class="formField">
+            <label asp-for="Description">Description</label>
+            <textarea asp-for="Description"></textarea>
+        </div>
 
-    <div>
-        <label asp-for="Date">Date</label>
-        <input type="date" asp-for="Date" />
-    </div>
+        <div class="formField">
+            <label asp-for="Justification">Justification</label>
+            <textarea asp-for="Justification"></textarea>
+        </div>
 
-    <div>
-        <label asp-for="Danger">Danger</label>
-        <input type="text" asp-for="Danger" />
-    </div>
+        <div class="formField">
+            <label asp-for="Date">Date</label>
+            <input type="date" asp-for="Date" />
+        </div>
+
+        <div class="formField">
+            <label asp-for="Danger">Danger</label>
+            <input type="text" asp-for="Danger" />
+        </div>
 
 
-    <div>
-        <label asp-for="Longitude">Longitude</label>
-        <input type="number" asp-for="Longitude" />
-    </div>
+        <div class="formField">
+            <label asp-for="Longitude">Longitude</label>
+            <input type="number" asp-for="Longitude" />
+        </div>
 
-    <div>
-        <label asp-for="Latitude">Latitude</label>
-        <input type="number" asp-for="Latitude" />
-    </div>
+        <div class="formField">
+            <label asp-for="Latitude">Latitude</label>
+            <input type="number" asp-for="Latitude" />
+        </div>
 
-    <div>
-        <label asp-for="Area">Area</label>
-        <input type="number" asp-for="Area" />
-    </div>
+        <div class="formField">
+            <label asp-for="Area">Area</label>
+            <input type="number" asp-for="Area" />
+        </div>
 
-    <div>
-        <label asp-for="Category">Category</label>
-        <select name="catergory" asp-for="Category">
+        <div class="formField">
+            <label asp-for="Category">Category</label>
+            <select name="catergory" asp-for="Category">
 
-            <option value="cultural">Cultural</option>
-            <option value="natural">Natural</option>
-            <option value="mixed">Mixed</option>
-        </select>
-    </div>
+                <option value="cultural">Cultural</option>
+                <option value="natural">Natural</option>
+                <option value="mixed">Mixed</option>
+            </select>
+        </div>
 
-    <div>
-        <label asp-for="Country">Country</label>
-        <input type="text" asp-for="Country" />
-    </div>
+        <div class="formField">
+            <label asp-for="Country">Country</label>
+            <input type="text" asp-for="Country" />
+        </div>
 
-    <div>
-        <label asp-for="Continent">Continent</label>
-        <input type="text" asp-for="Continent" />
-    </div>
+        <div class="formField">
+            <label asp-for="Continent">Continent</label>
+            <input type="text" asp-for="Continent" />
+        </div>
 
-    <input type="hidden" name="GeographicalCoordinates" value="@Model.GeographicalCoordinates" />
+        <input type="hidden" name="GeographicalCoordinates" value="@Model.GeographicalCoordinates" />
 
-   @* <div>
-        <label asp-for="GeographicalCoordinates">Geographical Co-ordinates</label>
-        <input type="number" asp-for="GeographicalCoordinates" />
-        <span asp-validation-for="GeographicalCoordinates" class="error"></span>
-    </div>*@
 
-    <div>
-        <input type="submit" value="Update" class="edit" />
-    </div>
 
-</form>
+        <div class="button">
+            <input type="submit" value="Update" class="edit" />
+        </div>
+
+    </form>
+</div>
