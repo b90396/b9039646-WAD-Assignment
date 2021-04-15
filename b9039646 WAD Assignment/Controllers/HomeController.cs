@@ -45,8 +45,9 @@ namespace b9039646_WAD_Assignment.Controllers
             int max = _context.Locations.Count();
             int locationIndex = random.Next(max);
             Location[] LocationArray = _context.Locations.ToArray();
+            Location model = LocationArray[locationIndex];
 
-            return View(LocationArray[locationIndex]);
+            return View(model);
         }
 
         public IActionResult AllLocations()

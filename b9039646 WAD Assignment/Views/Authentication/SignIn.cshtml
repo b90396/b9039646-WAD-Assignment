@@ -1,21 +1,26 @@
 ﻿@model SignIn
 
-<h2>Sign In</h2>
-<section>
-    <form asp-controller="Authentication" asp-action="SignIn" method="post">
-        <div>
+    <head>
+        <link rel="stylesheet" href="~/css/forms.css" />
+        <link rel="stylesheet" href="~/css/home.css" />
+    </head>
+
+<h2 class="title">Sign In</h2>
+<section class="formContainer">
+    <form asp-controller="Authentication" asp-action="SignIn" method="post" class="centerForm">
+        <div class="formField">
             <label asp-for="UserName"></label>
             <input type="text" asp-for="UserName" />
         </div>
-        <div>
+        <div class="formField">
             <label asp-for="Password"></label>
             <input type="password" asp-for="Password" />
         </div>
-        <div>
+        <div class="formField">
             <label asp-for="RememberMe"></label>
             <input type="checkbox" asp-for="RememberMe" />
         </div>
-        <div>
+        <div class="button">
             <button type="submit" class="add">Sign In</button>
         </div>
         <div asp-validation-summary="All" class="message"></div>

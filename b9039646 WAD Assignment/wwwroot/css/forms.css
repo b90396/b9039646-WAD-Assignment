@@ -1,0 +1,38 @@
+﻿body {
+}
+
+.centerForm{
+    text-align:center;
+}
+
+.formContainer {
+    width: 525px;
+    clear: both;
+    background-color:lightgray;
+}
+
+.formContainer input {
+    width: 90%;
+    clear: both;
+
+}
+
+.formContainer select {
+    width: 90%;
+    clear: both;
+}
+
+.formContainer textarea {
+    width: 90%;
+    clear: both;
+
+}
+
+
+.button {
+    padding-bottom:5%;
+}
+
+.formField{
+    padding-bottom:5%;
+}

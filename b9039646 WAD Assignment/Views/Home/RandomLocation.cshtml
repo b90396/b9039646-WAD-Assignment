@@ -1,14 +1,86 @@
-﻿@model b9039646_WAD_Assignment.Models.Location
-@{
-    //ViewData["Name"] = Model.Name;
+﻿@{ string backgroundImage = "";
+
+                if (Model.Continent == "Africa")
+                {
+                    backgroundImage = "/images/Africa.png";
+                }
+                if (Model.Continent == "Latin America and the Caribbean")
+                {
+                    backgroundImage = "/images/South_America.png";
+                }
+                if (Model.Continent == "Europe and North America")
+                {
+                    if (Model.Country == "United States of America")
+                    {
+                        backgroundImage = "/images/North_America.png";
+                    }
+                    else { backgroundImage = "/images/Europe.png"; }
+
+                }
+                if (Model.Continent == "Asia and the Pacific" || Model.Continent == "Arab States")
+                {
+
+                    backgroundImage = "/images/Asia.png";
+
+                }
+                if (Model.Country == "Australia" || Model.Country == "New Zealand,New Zealand,New Zealand")
+                {
+
+                    backgroundImage = "/images/Australia.png";
+
+                }
+
 }
+
+
 
 <head>
 
     <link rel="stylesheet" href="~/css/home.css" />
+    <style>
+        body {
+
+
+            background-image: url(@backgroundImage);
+            background-repeat:no-repeat;
+            background-size:100% 100%;
+
+
+
+
+
+        }
+
+    </style>
 
 </head>
 
-<h1 class="title">Generates a random location below</h1>
+<body>
+    <table class="table">
+        <tr>
+            <td>Name</td>
+            <td>Description</td>
+            <td>Area</td>
+            <td>Country</td>
+            <td>Continent</td>
+            <td>Geographical Co-ordinates</td>
+        </tr>
 
-<p class=" = locationName">@Model.Name</p>
+        <tr>
+            <td>@Model.Name</td>
+            <td>@Model.Description</td>
+            <td>@Model.Area</td>
+            <td>@Model.Country</td>
+            <td>@Model.Continent</td>
+            <td>@Model.GeographicalCoordinates</td>
+
+
+        </tr>
+
+
+
+    </table>
+
+    <a asp-controller="Home" asp-action="AddToFavourites" asp-route-GeographicalCoordinates="@Model.GeographicalCoordinates">Add to Favourites</a>
+
+</body>
